@@ -23,3 +23,13 @@ provider "azurerm" {
     
     features {}
 }
+
+## Create Resource Group - EU-PROD01
+resource "azurerm_resource_group" "RGRP-euprod01" {
+  name     = "EU-PROD01"
+  location = "North Europe"
+
+  tags = {
+    environment = "EU-PROD01"
+  }
+}
